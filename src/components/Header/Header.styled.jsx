@@ -10,7 +10,7 @@ export const ContainerHeader = styled.header`
   padding: 8px 5px;
   border-bottom: 1px solid black;
 `;
-export const Logo = styled(NavLink)`
+export const Logo = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +29,7 @@ export const Logo = styled(NavLink)`
     opacity: 0.8;
   }
 `;
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
