@@ -40,8 +40,7 @@ export const Button = styled.button`
   // box-shadow: 0 3.44px 3.44px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0 3.44px 3.44px 0 rgba(0, 0, 0, 0.25);
 
   }
