@@ -8,7 +8,7 @@ import {
   // FooterStyled,
   StyledNavLink,
 } from "./Home.styled";
-
+//  import { Loader } from "../Loader/Loader";
 
 export const Home = () => {
 

@@ -16,6 +16,9 @@ import {
 
 export const SearchToFilter = () => {
 
+
+
+  
 const handleFormSubmit = e => {
     e.preventDefault();
 }
@@ -29,13 +32,11 @@ const handleFormSubmit = e => {
             placeholder="Enter the text"
             type="text"
             name="name"
-            pattern="^[A-Za-z\u0080-\uFFFF ']+$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           >
             <option value="grapefruit">Грейпфрут</option>
             <option value="lime">Лайм</option>
-            <option selected value="coconut">Кокос</option>
+            <option value="coconut">Кокос</option>
           
         </InputBrandCar>
 
@@ -47,8 +48,6 @@ const handleFormSubmit = e => {
           placeholder="To $"
             type="price"
             name="number"
-            pattern="^(\+?[0-9.\(\)\-\s]*)$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           >
             <Option value="one">1</Option>
@@ -63,8 +62,6 @@ const handleFormSubmit = e => {
           placeholder="From"
             type="price"
             name="number"
-            pattern="^(\+?[0-9.\(\)\-\s]*)$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
 
@@ -72,8 +69,6 @@ const handleFormSubmit = e => {
           placeholder="To"
             type="price"
             name="number"
-            pattern="^(\+?[0-9.\(\)\-\s]*)$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
         </label>
