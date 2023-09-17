@@ -60,7 +60,7 @@ export const StyledNavLink = styled(NavLink)`
 display: flex;
 align-items: center;
 justify-content: center;
-
+ 
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
