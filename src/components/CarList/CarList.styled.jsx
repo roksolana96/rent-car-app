@@ -10,22 +10,29 @@ export const List = styled.ul`
   margin-left: auto;
   margin-right: auto;
   
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 `;
 
 export const Item = styled.li`
+
   display: inline-block;
+  *display: inline;
+  padding: 10px;
   width: 274px;
   // height: 426px;
   text-decoration: none;
   position: relative;
 
-  margin-right: 29px;
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
+  // margin-right: 29px;
   margin-bottom: 50px;
 
   font-family: Manrope;
+
+  // &:nth-child(4n) {
+  //   margin-right: 0;
+  // }
 `;
 
 export const Button = styled.button`

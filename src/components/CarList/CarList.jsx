@@ -40,7 +40,6 @@ export const CarList = () => {
   };
   return (
     <>
-
           <List>
             {cars.slice(0,visibleCars).map((car) => (
               <Item key={car.id}>
