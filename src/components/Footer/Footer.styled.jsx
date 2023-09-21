@@ -29,7 +29,7 @@ export const FooterStyled = styled.footer`
 
 `;
 
-export const OwnerName = styled.span`
+export const OwnerName = styled.a`
   color: #2476f1;
   margin-left: 5px;
 

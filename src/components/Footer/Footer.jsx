@@ -11,7 +11,9 @@ export const Footer = () => {
         <p>© 2023 | All Rights Reserved |</p>
         &nbsp;Developed by
 
-        <OwnerName>Roksolana Busko</OwnerName>
+        <OwnerName
+        href="https://www.linkedin.com/in/roksolana-busko/"
+        >Roksolana Busko</OwnerName>
       </FooterStyled>
     </>
   );

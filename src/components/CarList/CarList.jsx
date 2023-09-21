@@ -56,11 +56,9 @@ export const CarList = () => {
                   {car.mileage} m | {car.accessories[3]}
                 </InfoCar>
                 <ButtonCar onClick={() => setOpenModal(true)} >Learn more</ButtonCar>
-                {/* <CarCard user={car} /> */}
                 <Modal 
-                open={openModal} 
+                  open={openModal} 
                   onClose={() => setOpenModal(false)} />
-                {/* {isOpenedModal && <Modal handleToggle={handleToggle} />} */}
               </Item>
             ))}
           </List>

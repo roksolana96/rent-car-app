@@ -5,6 +5,10 @@ import {
     Logo,
 
  } from "./Header.styled";
+
+ import { PhoneOutlined } from '@ant-design/icons';
+
+
 export const Header = () => {
   return (
     <ContainerHeader>
@@ -12,6 +16,7 @@ export const Header = () => {
       // to="/"
       >
         Car Rentals
+        <PhoneOutlined />
       </Logo>
 
 

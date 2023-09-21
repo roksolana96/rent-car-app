@@ -9,6 +9,7 @@ import {
   StyledNavLink,
 } from "./Home.styled";
 //  import { Loader } from "../Loader/Loader";
+import { ArrowRightOutlined, CarOutlined } from '@ant-design/icons';
 
 export const Home = () => {
 
@@ -25,7 +26,10 @@ export const Home = () => {
           <br />
           Enjoy!
         </Text>
-        <StyledNavLink to="/catalog"> start </StyledNavLink>
+        <StyledNavLink to="/catalog"> START
+        <ArrowRightOutlined />
+        <CarOutlined />
+         </StyledNavLink>
       </MainContent>
     </Container>
     </Main>
