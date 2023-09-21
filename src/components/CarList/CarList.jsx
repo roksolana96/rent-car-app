@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { CarCard } from "../CarCard/CarCard";
-// import { Modal } from "../Modal/Modal";
+// import { CarCard } from "../CarCard/CarCard";
+import { Modal } from "../Modal/Modal";
 import { Button, List, Item,
     Img,
     InfoCar,
@@ -16,7 +16,7 @@ export const CarList = () => {
   const [cars, setCars] = useState([]);
   const [visibleCars, setVisibleCars] = useState(8);
 
-  const [isOpenedModal, setIsOpenedModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     fetchCars()
@@ -35,11 +35,12 @@ export const CarList = () => {
     setVisibleCars((prevVisibleCars) => prevVisibleCars + 8);
   };
 
-  const handleToggle = () => {
-    setIsOpenedModal(prevState => !prevState);
-  };
+  // const handleToggle = () => {
+  //   setIsOpenedModal(prevState => !prevState);
+  // };
   return (
     <>
+
           <List>
             {cars.slice(0,visibleCars).map((car) => (
               <Item key={car.id}>
@@ -54,9 +55,12 @@ export const CarList = () => {
                   {car.address} | {car.rentalCompany} | {car.type} |
                   {car.mileage} m | {car.accessories[3]}
                 </InfoCar>
-                <ButtonCar onClick={handleToggle} >Learn more</ButtonCar>
+                <ButtonCar onClick={() => setOpenModal(true)} >Learn more</ButtonCar>
                 {/* <CarCard user={car} /> */}
-                {isOpenedModal && <CarCard handleToggle={handleToggle} />}
+                <Modal 
+                open={openModal} 
+                  onClose={() => setOpenModal(false)} />
+                {/* {isOpenedModal && <Modal handleToggle={handleToggle} />} */}
               </Item>
             ))}
           </List>

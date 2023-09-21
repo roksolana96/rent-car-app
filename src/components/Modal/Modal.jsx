@@ -1,37 +1,41 @@
 import React from 'react';
 import xClose from '../../img/xclose.png'
-
+import {CarCard} from '../CarCard/CarCard' 
+import { Overlay,
+  ModalContainer,
+  CloseButton,
+ } from './Modal.styled';
 export const Modal = ({ open, onClose }) => {
   if (!open) return null;
+
+  const CloseEsc = e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      window.removeEventListener('keydown', CloseEsc);
+      onClose();
+    }
+  };
+
+  window.addEventListener('keydown', CloseEsc);
   return (
-    <div onClick={onClose} className='overlay'>
-      <div
+    <Overlay onClick={onClose} >
+      <ModalContainer
         onClick={(e) => {
           e.stopPropagation();
         }}
         className='modalContainer'
       >
-        <img src={xClose} alt='/' />
         <div className='modalRight'>
-          <p className='closeBtn' onClick={onClose}>
-            X
-          </p>
+          <CloseButton src={xClose} alt='/'  
+            onClick={onClose}>
+          </CloseButton >
           <div className='content'>
-            <p>Do you want a</p>
-            <h1>$20 CREDIT</h1>
-            <p>for your first tade?</p>
-          </div>
-          <div className='btnContainer'>
-            <button className='btnPrimary'>
-              <span className='bold'>YES</span>, I love NFT's
-            </button>
-            <button className='btnOutline'>
-              <span className='bold'>NO</span>, thanks
-            </button>
+              <CarCard/>
+
           </div>
         </div>
-      </div>
-    </div>
+      </ModalContainer>
+    </Overlay>
   );
 };
 
@@ -44,6 +48,7 @@ export const Modal = ({ open, onClose }) => {
 // const modalRoot = document.querySelector('#modal-root');
 
 // export const Modal = ({onClose}) =>{
+  
 //   useEffect(()=>{
 //     window.addEventListener('keydown', handleKeyDown);
 //     return()=> {
@@ -67,7 +72,7 @@ export const Modal = ({ open, onClose }) => {
 //     return createPortal(
 //       <Overlay onClick={handleBackdropClick}>
 //         <ModalStyled>
-//           <div>asd</div>
+//         <div>Catalog123</div>
 //         </ModalStyled>
 //       </Overlay>,
 //       modalRoot
